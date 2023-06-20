@@ -9,7 +9,7 @@ delta = {
     pg.K_DOWN: (0, +5),
     pg.K_LEFT: (-5, 0),
     pg.K_RIGHT: (+5, 0),
-}
+    }
 
 def check_bound(rect:pg.Rect) -> tuple[bool, bool]:
     yoko, tate =True, True
@@ -21,7 +21,7 @@ def check_bound(rect:pg.Rect) -> tuple[bool, bool]:
 
 def kk_k():
     kk_img0 = pg.transform.rotozoom(pg.image.load("ex02/fig/3.png"), 0, 2.0)
-    kk_img1 = pg.transform.flip(kk_img0, True, False)
+    kk_img1 = pg.transform.flip(kk_img0, True, False)   #main関数とは別にこうかとんの画像をロードする必要があったから
     return{(0, 0):kk_img0, 
            (-5, 0):kk_img0,
            (-5, -5):pg.transform.rotozoom(kk_img0, -45, 1.0),
